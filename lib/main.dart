@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   void _onReady() {
-    // FlutterNativeSplash.remove();
+    FlutterNativeSplash.remove();
   }
 
   @override
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       defaultTransition: Transition.cupertino,
       debugShowCheckedModeBanner: false,
       getPages: AppRouter.router,
-      initialRoute: AppRoutes.splashScreen,
+      initialRoute: AppRoutes.mainScreen,
       onReady: _onReady,
     );
   }

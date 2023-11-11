@@ -76,7 +76,7 @@ class _MainScreenState extends State<MainScreen> {
                   margin: const EdgeInsets.all(16),
                   padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 16),
                   decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.black.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: BackdropFilter(
@@ -102,18 +102,7 @@ class _MainScreenState extends State<MainScreen> {
                                       height: double.infinity,
                                       padding: const EdgeInsets.all(8),
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        // color: const Color(0xFF111928).withOpacity(0.8),
-                                        // border: Border.all(
-                                        //   width: 1.5,
-                                        //   color: const Color(0xFF111928).withOpacity(0.8),
-                                        // ),
-                                        // gradient: LinearGradient(
-                                        //   colors: [
-                                        //     Theme.of(context).colorScheme.onPrimary,
-                                        //     Theme.of(context).colorScheme.onSecondary,
-                                        //   ],
-                                        // ),
+                                        color: Theme.of(context).colorScheme.primaryContainer,
                                         borderRadius: BorderRadius.circular(8),
                                       ),
                                       clipBehavior: Clip.antiAlias,
@@ -131,7 +120,7 @@ class _MainScreenState extends State<MainScreen> {
                                           const Spacer(),
                                           SizedBox(
                                             width: double.infinity,
-                                            child: FilledButton.tonal(
+                                            child: FilledButton(
                                               onPressed: () {},
                                               child: const Icon(Icons.arrow_right),
                                             ),
@@ -153,7 +142,7 @@ class _MainScreenState extends State<MainScreen> {
                                         width: double.infinity,
                                         padding: const EdgeInsets.all(16),
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
+                                          color: Theme.of(context).colorScheme.primaryContainer,
                                           borderRadius: BorderRadius.circular(8),
                                         ),
                                         child: Column(
@@ -176,7 +165,7 @@ class _MainScreenState extends State<MainScreen> {
                                         width: double.infinity,
                                         padding: const EdgeInsets.all(16),
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
+                                          color: Theme.of(context).colorScheme.primaryContainer,
                                           borderRadius: BorderRadius.circular(8),
                                         ),
                                         child: Column(
@@ -201,7 +190,7 @@ class _MainScreenState extends State<MainScreen> {
                         // Container(
                         //   padding: const EdgeInsets.all(16),
                         //   decoration: BoxDecoration(
-                        //     color: Colors.white,
+                        //     color: Theme.of(context).colorScheme.primaryContainer,
                         //     borderRadius: BorderRadius.circular(8),
                         //   ),
                         //   child: const Row(
