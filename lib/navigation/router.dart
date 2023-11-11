@@ -1,25 +1,48 @@
 import "package:get/get.dart";
 import "package:mk_bd/navigation/routes.dart";
-import "package:mk_bd/views/home/home.screen.dart";
-import "package:mk_bd/views/start_screen/start.screen.dart";
+import "package:mk_bd/views/birthday/birthday.screen.dart";
+import "package:mk_bd/views/main/main.screen.dart";
+import "package:mk_bd/views/message/message.screen.dart";
+import "package:mk_bd/views/moments/moments.screen.dart";
+import "package:mk_bd/views/splash_screen/splash.screen.dart";
 
 class AppRouter {
   static final router = [
     GetPage(
-      name: AppRoutes.startScreen,
-      page: () => const StartScreen(),
+      name: AppRoutes.birthdayScreen,
+      page: () => const BirthdayScreen(),
     ),
     GetPage(
-      name: AppRoutes.homeScreen,
-      page: () => const HomeScreen(),
+      name: AppRoutes.mainScreen,
+      page: () => const MainScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.momentsScreen,
+      page: () => const MomentsScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.messageScreen,
+      page: () => const MessageScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.splashScreen,
+      page: () => const SplashScreen(),
     ),
   ];
 
-  // static Future<void> navigateToHomeScreen() async {
-  //   return await Get.to(AppRoutes.homeScreen);
-  // }
+  static Future<void> navigateToBirthdayScreen() async {
+    return await Get.toNamed(AppRoutes.birthdayScreen);
+  }
 
-  static Future<void> navigateToHomeScreen() async {
-    return await Get.toNamed(AppRoutes.homeScreen);
+  static Future<void> navigateToMainScreen() async {
+    return await Get.offAllNamed(AppRoutes.mainScreen);
+  }
+
+  static Future<void> navigateToMomentsScreen() async {
+    return await Get.toNamed(AppRoutes.momentsScreen);
+  }
+
+  static Future<void> navigateToMessageScreen() async {
+    return await Get.toNamed(AppRoutes.messageScreen);
   }
 }
