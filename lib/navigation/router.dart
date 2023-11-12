@@ -1,6 +1,7 @@
 import "package:get/get.dart";
 import "package:mk_bd/navigation/routes.dart";
 import "package:mk_bd/views/birthday/birthday.screen.dart";
+import "package:mk_bd/views/gallery/gallery.screen.dart";
 import "package:mk_bd/views/main/main.screen.dart";
 import "package:mk_bd/views/message/message.screen.dart";
 import "package:mk_bd/views/moments/moments.screen.dart";
@@ -28,6 +29,10 @@ class AppRouter {
       name: AppRoutes.splashScreen,
       page: () => const SplashScreen(),
     ),
+    GetPage(
+      name: AppRoutes.galleryScreen,
+      page: () => const GalleryScreen(),
+    ),
   ];
 
   static Future<void> navigateToBirthdayScreen() async {
@@ -44,5 +49,9 @@ class AppRouter {
 
   static Future<void> navigateToMessageScreen() async {
     return await Get.toNamed(AppRoutes.messageScreen);
+  }
+
+  static Future<void> navigateToGalleryScreen() async {
+    return await Get.toNamed(AppRoutes.galleryScreen);
   }
 }

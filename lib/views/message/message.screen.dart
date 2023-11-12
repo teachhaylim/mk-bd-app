@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:get/get.dart";
+import "package:mk_bd/data/mockdata.dart";
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({super.key});
@@ -27,7 +29,37 @@ class _MessageScreenState extends State<MessageScreen> {
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
-          body: Container(),
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            centerTitle: true,
+            leading: IconButton(
+              onPressed: () {
+                Get.back();
+              },
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
+            ),
+            title: Text(
+              "🥺 My Message 🥺",
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700, color: Colors.white),
+            ),
+          ),
+          body: Center(
+            child: SingleChildScrollView(
+              child: Container(
+                margin: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Theme.of(context).colorScheme.secondaryContainer,
+                ),
+                child: Text(
+                  MockData.myMessage,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 20, fontWeight: FontWeight.w700),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ),
         ),
       ],
     );

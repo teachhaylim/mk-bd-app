@@ -24,6 +24,10 @@ class _MainScreenState extends State<MainScreen> {
     AppRouter.navigateToMessageScreen();
   }
 
+  void _navigateToGalleryScreen() {
+    AppRouter.navigateToGalleryScreen();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,7 +125,7 @@ class _MainScreenState extends State<MainScreen> {
                                           SizedBox(
                                             width: double.infinity,
                                             child: FilledButton(
-                                              onPressed: () {},
+                                              onPressed: _navigateToBirthdayScreen,
                                               child: const Icon(Icons.arrow_right),
                                             ),
                                           ),
@@ -186,21 +190,29 @@ class _MainScreenState extends State<MainScreen> {
                             ],
                           ),
                         ),
-                        // const SizedBox(height: 16),
-                        // Container(
-                        //   padding: const EdgeInsets.all(16),
-                        //   decoration: BoxDecoration(
-                        //     color: Theme.of(context).colorScheme.primaryContainer,
-                        //     borderRadius: BorderRadius.circular(8),
-                        //   ),
-                        //   child: const Row(
-                        //     children: [
-                        //       Text(
-                        //         "My deepest message",
-                        //       ),
-                        //     ],
-                        //   ),
-                        // ),
+                        const SizedBox(height: 16),
+                        GestureDetector(
+                          onTap: _navigateToGalleryScreen,
+                          child: Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).colorScheme.primaryContainer,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Row(
+                              children: [
+                                Image.asset("lib/assets/icons/ic_gallery.png", width: 32, height: 32),
+                                const SizedBox(width: 8),
+                                Text(
+                                  "Gallery",
+                                  style: Theme.of(context).textTheme.titleMedium,
+                                ),
+                                const Spacer(),
+                                const Icon(Icons.arrow_right),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),

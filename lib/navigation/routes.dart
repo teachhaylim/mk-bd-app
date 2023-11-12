@@ -4,4 +4,5 @@ class AppRoutes {
   static const momentsScreen = "/moment";
   static const messageScreen = "/message";
   static const splashScreen = "/splash";
+  static const galleryScreen = "/gallery";
 }
