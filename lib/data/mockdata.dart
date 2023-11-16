@@ -265,6 +265,10 @@ class MockData {
       null,
       "lib/assets/images/ic_gallery_40.jpg",
     ),
+    MomentDto(
+      null,
+      "lib/assets/images/ic_gallery_41.jpg",
+    ),
   ];
 
   static const String happyBirthdayMessage1 = "Happy birthday to the most special person in my life \n\n 🥳🥳🎉🎉";
@@ -282,10 +286,11 @@ class MockData {
   ];
 
   static const String myMessage = """
-    I just want to let you know just how much you mean to me.
+    I just wanna to let you know how much you mean to me.
+    \nYou mean more than the word "lover" could ever describle how important you are to me
     \nYour love has brought countless joy and happinese into my world and I'm grateful for everything.
     \nYou are the light that brighten my darkest world, the smile that warms my heart, and the love that completes me.
-    \nYou are my greatest joy, my sunshine. I hope that there are more incredible moments, laughters, and joy that we can cheerish together, grow old together.
+    \nYou are my greatest joy, my queen. I hope that there are more incredible moments, laughters, and joy that we can cheerish together, grow old together.
     \n 🥺🥺❤️❤️
   """;
 }
